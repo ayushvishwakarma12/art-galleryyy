@@ -47,7 +47,7 @@ const Galleries = () => {
             <p className="font-bold pl-8 leading-8">Page No : {pageNo}</p>
             <ul className=" grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-2 gap-2 md:px-5 md:gap-4 justify-center">
               {imageData.map((e: ImageData) => (
-                <Link to={`/image-details/${e.id}`}>
+                <Link key={e.id} to={`/image-details/${e.id}`}>
                   <li className="">
                     <img
                       className=" object-cover h-[200px] w-[200px] md:h-[400px] md:w-[400px]  inline-block bg-slate-900 rounded-lg"

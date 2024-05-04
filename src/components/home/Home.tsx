@@ -1,8 +1,7 @@
 import React from "react";
-import Navbar from "../navbar/Navbar";
 import { useNavigate } from "react-router-dom";
 
-const Home = () => {
+const Home: React.FC = () => {
   const navigate = useNavigate();
   return (
     <>

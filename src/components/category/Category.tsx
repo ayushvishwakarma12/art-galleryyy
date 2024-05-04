@@ -6,7 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { MdArrowBackIos } from "react-icons/md";
 import MobileNavbar from "../mobileNavbar/MobileNavbar";
 
-const Category = () => {
+const Category: React.FC = () => {
   const [category, setCategory] = useState<string>("backgrounds");
   const [loading, setLoading] = useState<boolean>(false);
   const [categoryData, setCategoryData] = useState<ImageData[]>([]);
@@ -43,9 +43,10 @@ const Category = () => {
       </div>
       <div className="flex md:flex-row flex-col p-5 sidebar">
         <ul className="min-w-[200px] px-2 py-4 md:py-0 flex md:flex-col gap-4 max-h-[85vh] overflow-x-auto sticky">
-          {categories.map((c) => {
+          {categories.map((c, i) => {
             return (
               <li
+                key={i}
                 onClick={() => setCategory(c)}
                 className={`${
                   category === c ? "bg-slate-800 text-white" : ""
@@ -58,7 +59,7 @@ const Category = () => {
         </ul>
         <ul className="grid grid-cols-2 md:grid-cols-3  lg:grid-cols-4 gap-2 w-full py-5 md:py-0 px-4 max-h-[85vh] overflow-y-auto">
           {categoryData.map((e) => (
-            <Link to={`/image-details/${e.id}`}>
+            <Link key={e.id} to={`/image-details/${e.id}`}>
               <li className="">
                 <img
                   src={e.largeImageURL}

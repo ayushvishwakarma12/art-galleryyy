@@ -6,7 +6,7 @@ import { MdArrowBackIos } from "react-icons/md";
 import { FaHeart } from "react-icons/fa";
 import Loader from "../loader/Loader";
 
-const ImageDetails = () => {
+const ImageDetails: React.FC = () => {
   const { pathname } = useLocation();
   const id = pathname.split("/")[2];
   const [image, setImage] = useState<ImageData[]>([]);
@@ -85,7 +85,9 @@ const ImageDetails = () => {
           </div>
         </div>
       ) : (
-        <Loader />
+        <div className="h-screen flex justify-center items-center">
+          <Loader />
+        </div>
       )}
     </>
   );

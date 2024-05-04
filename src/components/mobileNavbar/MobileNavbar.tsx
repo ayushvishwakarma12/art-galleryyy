@@ -4,7 +4,7 @@ import { PiPencilLine } from "react-icons/pi";
 import { FaRegUser } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-const MobileNavbar = () => {
+const MobileNavbar: React.FC = () => {
   return (
     <div className="fixed bottom-0 rounded-t-2xl h-[80px] bg-white w-full px-4  shadow-2xl">
       <div className="relative">
