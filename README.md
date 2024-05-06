@@ -25,24 +25,3 @@ across different devices.
   image details page.
 - **Responsive Design:** The website is designed to adapt to various screen
   sizes, ensuring a consistent experience across devices.
-
-## Getting Started
-
-1. **Clone the Repository:**
-
-   ```bash
-   git clone https://github.com/your-username/art-gallery-app.git
-   ```
-
-2. **Install Dependecies:**
-
-   ```bash
-   cd art-gallery-app npm install
-   ```
-
-3. **Run the App:**
-   ```bash
-   npm start
-   ```
-
-The app should now be running on `http://localhost:3000`.
