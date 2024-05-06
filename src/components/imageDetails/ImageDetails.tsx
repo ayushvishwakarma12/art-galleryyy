@@ -44,8 +44,11 @@ const ImageDetails: React.FC = () => {
         </button>
       </div>
       {image.length !== 0 ? (
-        <div className="md:p-5 flex flex-col items-center justify-center w-full">
-          <img src={image[0].largeImageURL} className="w-full md:rounded-xl" />
+        <div className="flex flex-col items-center justify-center w-full  bg-gradient-to-br from-emerald-50 to-slate-100">
+          <img
+            src={image[0].largeImageURL}
+            className="w-full max-h-[100vh] object-contain object-top"
+          />
 
           <div
             className={`fixed w-full bg-white ${
@@ -62,25 +65,31 @@ const ImageDetails: React.FC = () => {
             <div
               className={`${
                 overview ? "block" : "hidden"
-              } relative mt-10 self-center ml-[40px]  md:ml-[100px]`}
+              } relative mt-14 self-center ml-[40px]  md:ml-[100px]`}
             >
-              <p className=" text-slate-500  md:text-xl ">Artist</p>
-              <p className="font-semibold  md:text-xl ">Ken Taylor</p>
-              <p className="text-slate-500 md:text-xl ">Size</p>
-              <p className="font-semibold md:text-xl ">12x16" (30.5x40.6 cm)</p>
-              <p className="text-slate-500 md:text-xl ">Location</p>
-              <p className="font-semibold md:text-xl ">
+              <p className=" text-slate-500  md:text-lg  font-bold">Artist</p>
+              <p className="font-semibold  md:text-lg ">Ken Taylor</p>
+              <p className="text-slate-500 md:text-xl mt-2 font-bold">Size</p>
+              <p className="font-semibold md:text-lg">12x16" (30.5x40.6 cm)</p>
+              <p className="text-slate-500 md:text-xl mt-2 font-bold">
+                Location
+              </p>
+              <p className="font-semibold md:text-lg ">
                 The Museum of Modern Art,
               </p>
-              <p className="">Melbourne, Australia</p>
+              <p className="font-semibold md:text-lg">Melbourne, Australia</p>
               <br />
-              <p className=" md:w-[60%] font-semibold md:text-xl ">
+              <p className=" md:w-[60%] font-semibold md:text-lg ">
                 Melbourne based Illustrator & Designer Ken Taylor works
                 primarily within the music industry and is predominantly well
                 known for his striking rock posters. Ken started in Perth
                 Western Australia doing posters and album artwork for local
                 bands.
               </p>
+              <audio className="w-full md:w-[90%] my-8" controls>
+                <source src="/AlanCross-Porter-v2.mp3" type="audio/mpeg" />
+                hey
+              </audio>
             </div>
           </div>
         </div>

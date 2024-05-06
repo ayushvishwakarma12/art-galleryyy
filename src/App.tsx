@@ -1,5 +1,3 @@
-import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import Home from "./components/home/Home";
 import Gallaries from "./components/galleries/Galleries";
@@ -7,7 +5,7 @@ import { Route, Routes } from "react-router-dom";
 import Category from "./components/category/Category";
 import ImageDetails from "./components/imageDetails/ImageDetails";
 
-function App() {
+function App(): JSX.Element {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
